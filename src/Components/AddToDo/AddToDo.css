@@ -1,0 +1,64 @@
+.addToDo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.addd {
+  overflow: scroll;
+  height: 375px;
+  scrollbar-width: none;
+  margin-top: 25px;
+}
+
+.to {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  transition: all 0.5s linear;
+  animation: driven 1ms linear;
+  animation-timeline: view();
+}
+
+.tod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  box-shadow: 10px 10px 10px rgba(132, 132, 132, 0.35);
+  transform: scale(1.05);
+  transition: all 0.5s linear;
+  animation: driven 4ms linear;
+  animation-timeline: view();
+}
+
+button {
+  background-color: red;
+  border: 0;
+  padding: 5px 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes driven {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}

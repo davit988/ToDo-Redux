@@ -1,9 +1,18 @@
-import React from 'react'
+import "./ToDo.css";
 
-import "./ToDo.css"
-
-export const ToDo = () => {
+export const ToDo = ({ state, toDoText, add }) => {
   return (
-    <div>ToDo</div>
-  )
-}
+    <header>
+      <div className="container">
+        <div className="toDo">
+          <input
+            placeholder="Task"
+            value={state.text}
+            onChange={(e) => toDoText(e)}
+          />
+          <button onClick={add}>Add ToDo</button>
+        </div>
+      </div>
+    </header>
+  );
+};
