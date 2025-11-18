@@ -10,11 +10,21 @@ import { ToDo } from "./Components/ToDo/ToDo";
 import { AddToDo } from "./Components/AddToDo/AddToDo";
 import { useEffect } from "react";
 import { API } from "./api/api";
+import { Count } from "./Components/Count/Count";
+import { countPlusAC, countMinusAC } from "./Store/reducers/countReducers";
 
 function App() {
   const { count } = useSelector((state) => state.counterState);
   const dispatch = useDispatch();
   const state = useSelector((state) => state.toDoState);
+
+  const countPlus = () => {
+    dispatch(countPlusAC());
+  };
+
+  const countMinus = () => {
+    dispatch(countMinusAC());
+  };
   console.log(state);
 
   const toDoText = (e) => {
@@ -39,10 +49,9 @@ function App() {
 
   return (
     <>
+      <Count count={count} countPlus={countPlus} countMinus={countMinus} />
       <ToDo state={state} toDoText={toDoText} add={add} />
       <AddToDo deleteToDo={deleteToDo} toDo={state.todos} checked={checked} />
-      {/* <h1>{count}</h1>
-      <button onClick={() => dispatch({ type: "INC" })}>+</button> */}
     </>
   );
 }

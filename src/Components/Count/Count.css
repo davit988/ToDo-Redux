@@ -1,0 +1,22 @@
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;gap: 15px;
+}
+
+.countChangeBut{
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 19px;
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+    border-radius: 5px;
+}
+
+.countChangeBut:hover{
+    background-color: #e2e2e2;
+    border: 1px solid orange;
+    color: orange;
+}
