@@ -2,22 +2,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 20px;
   gap: 25px;
 }
 
 .toDo button {
   padding: 5px 8px;
   background-color: orange;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.toDo button:hover {
+  background-color: #e2e2e2;
+  color: orange;
+  border-color: orange;
 }
 
 .toDo input {
   padding: 3px 6px;
   width: 250px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  outline: none;
+}
+
+.toDo input:focus {
+  border-color: orange;
 }
 
 .textIsDone {

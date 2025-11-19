@@ -7,4 +7,3 @@ export const API = {
       .then((res) => dispatch(asyncToDosAC(res.data)));
   },
 };
-

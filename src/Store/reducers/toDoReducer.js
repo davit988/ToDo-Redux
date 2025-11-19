@@ -59,9 +59,8 @@ export const toDoReducer = (state = initialState, action) => {
       return state;
   }
 };
-export const asyncToDosAC = (data) => {
-  return { type: ASYNC_TODO, payload: data };
-};
+export const asyncToDosAC = (data) => ({ type: ASYNC_TODO, payload: data });
+
 export const changeTextAC = (text) => ({ type: CHANGE_TEXT, payload: text });
 export const addAC = () => ({ type: ADD });
 export const deleteAC = (id) => ({ type: DELETE, id: id });
